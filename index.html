@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1d4ed8" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <title>Milestone Bonus</title>
+    <!-- Buffer/process polyfills for browser -->
+    <script type="module">
+      import { Buffer } from 'buffer';
+      // @ts-ignore
+      window.Buffer = Buffer;
+      // @ts-ignore
+      window.process = window.process || { env: {} };
+    </script>
+    <!-- libsodium (required by HotPocket) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/libsodium-wrappers/0.5.4/sodium.min.js" integrity="sha512-k1r2zqQp1p8ScxIh4wnhBp6D0qv8UV4IBzGgqkB5ZyCzB1mX4caSNVdI9/V2QtrTKYlJwM9oIlgiP1Y8drg4WQ==" crossorigin="anonymous"></script>
+    <!-- HotPocket JS Client (browser) -->
+    <script src="https://cdn.jsdelivr.net/npm/hotpocket-js-client@0.5.3/browser.min.js"></script>
+  </head>
+  <body class="bg-gray-50">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
